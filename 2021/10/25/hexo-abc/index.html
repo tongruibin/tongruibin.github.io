@@ -22,14 +22,15 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.trbdev.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 <meta name="description" content="hexo文档hexo文档 安装 安装git 安装nodejs, 选择windows的LTS版本 安装Hexonpm install -g hexo-cli  重要命令init：初始化网站hexo init [folder]如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。本命令相当于执行了以下几步：Git clone hexo-starter 和 hexo-theme-lands">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 入门【windows】">
+<meta property="og:title" content="hexo入门【windows】">
 <meta property="og:url" content="https://www.trbdev.cn/2021/10/25/hexo-abc/index.html">
 <meta property="og:site_name" content="TRB">
 <meta property="og:description" content="hexo文档hexo文档 安装 安装git 安装nodejs, 选择windows的LTS版本 安装Hexonpm install -g hexo-cli  重要命令init：初始化网站hexo init [folder]如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。本命令相当于执行了以下几步：Git clone hexo-starter 和 hexo-theme-lands">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-25T09:36:10.842Z">
-<meta property="article:modified_time" content="2021-10-30T14:52:26.707Z">
+<meta property="article:modified_time" content="2021-10-30T19:11:37.085Z">
 <meta property="article:author" content="Tong Ruibin">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
 
 
@@ -37,12 +38,14 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.trbdev.cn/2021/10/25/hexo-abc/","path":"2021/10/25/hexo-abc/","title":"Hexo 入门【windows】"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.trbdev.cn/2021/10/25/hexo-abc/","path":"2021/10/25/hexo-abc/","title":"hexo入门【windows】"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Hexo 入门【windows】 | TRB</title>
+<title>hexo入门【windows】 | TRB</title>
   
 
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?9d4514cbd8a67fc00cef40efb24456bd"></script>
 
 
 
@@ -86,7 +89,9 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li>
   </ul>
 </nav>
 
@@ -132,9 +137,19 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -191,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hexo 入门【windows】
+          hexo入门【windows】
         </h1>
 
         <div class="post-meta-container">
@@ -209,8 +224,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-30 22:52:26" itemprop="dateModified" datetime="2021-10-30T22:52:26+08:00">2021-10-30</time>
+        <time title="修改时间：2021-10-31 03:11:37" itemprop="dateModified" datetime="2021-10-31T03:11:37+08:00">2021-10-31</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+    </span>
 
   
     <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
@@ -236,7 +260,7 @@
 <li>安装Hexo<code>npm install -g hexo-cli</code></li>
 </ol>
 <h2 id="重要命令"><a href="#重要命令" class="headerlink" title="重要命令"></a>重要命令</h2><h3 id="init：初始化网站"><a href="#init：初始化网站" class="headerlink" title="init：初始化网站"></a>init：初始化网站</h3><p><code>hexo init [folder]</code><br>如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br>本命令相当于执行了以下几步：<br>Git clone hexo-starter 和 hexo-theme-landscape 主题到当前目录或指定目录。<br>使用 Yarn 1、pnpm 或 npm 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js 安装。</p>
-<h3 id="new：新建文章"><a href="#new：新建文章" class="headerlink" title="new：新建文章"></a>new：新建文章</h3><p><code>hexo new [layout] &lt;title&gt;</code><br>如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。<br>如果标题包含空格的话，请使用引号括起来。<br><code>hexo new &quot;post title with whitespace&quot;</code></p>
+<h3 id="new：新建文章"><a href="#new：新建文章" class="headerlink" title="new：新建文章"></a>new：新建文章</h3><p><code>hexo new [layout] &lt;title&gt;</code><br>如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。<br>如果标题包含空格的话，请使用引号括起来。<br><code>hexo new &quot;post title with whitespace&quot;</code><br>新建的文章会生成在<code>source/_posts</code>目录下，用markdown的语法编辑文件内容即可</p>
 <h3 id="generate：生成静态文件"><a href="#generate：生成静态文件" class="headerlink" title="generate：生成静态文件"></a>generate：生成静态文件</h3><p><code>hexo generate</code><br>可简写为 hexo g<br><code>hexo g -d</code><br>文件成后立即部署网站</p>
 <h3 id="server：启动服务器"><a href="#server：启动服务器" class="headerlink" title="server：启动服务器"></a>server：启动服务器</h3><p><code>hexo server</code><br>默认情况下，访问网址为： <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
 <h3 id="deploy：部署网站"><a href="#deploy：部署网站" class="headerlink" title="deploy：部署网站"></a>deploy：部署网站</h3><p><code>hexo deploy</code><br>可简写为 hexo d<br><code>hexo d -g</code><br>部署之前预先生成静态文件</p>
@@ -319,7 +343,7 @@
 
     <footer class="post-footer">
           <div class="reward-container">
-  <div></div>
+  <div>富婆，饿饿，饭饭</div>
   <button>
     赞赏
   </button>
@@ -336,6 +360,9 @@
   </div>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
 
         
 

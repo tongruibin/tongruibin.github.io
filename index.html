@@ -39,6 +39,8 @@
 <title>TRB</title>
   
 
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?9d4514cbd8a67fc00cef40efb24456bd"></script>
 
 
 
@@ -82,7 +84,9 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li>
   </ul>
 </nav>
 
@@ -127,9 +131,19 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -172,6 +186,88 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.trbdev.cn/2021/10/31/hexo-theme-next-tags-and-categories/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/ikant.jpg">
+      <meta itemprop="name" content="Tong Ruibin">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TRB">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/10/31/hexo-theme-next-tags-and-categories/" class="post-title-link" itemprop="url">标签和分类</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-10-31 03:09:08 / 修改时间：03:29:15" itemprop="dateCreated datePublished" datetime="2021-10-31T03:09:08+08:00">2021-10-31</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h2><ol>
+<li><p>在Hexo 站点目录下。使用 hexo new page 新建一个 tags 页面<br><code>hexo new page tags</code></p>
+</li>
+<li><p>编辑<code>source/tags/index.md</code>文件<br>在文件的Front-matter的title的date下面增加内容<code>type: tags</code><br>如果有集成评论服务，页面也会带有评论。可以增加内容<code>comments: false</code>关闭</p>
+</li>
+<li><p>修改主题配置文件的 menu，开启tags功能</p>
+</li>
+</ol>
+<p>以后在文章的Front-matter部分增加tags就会自动打上标签</p>
+<h2 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h2><ol>
+<li><p>在Hexo 站点目录下。使用 hexo new page 新建一个 categories 页面<br><code>hexo new page categories</code></p>
+</li>
+<li><p>编辑<code>source/categories/index.md</code>文件<br>在文件的Front-matter的title的date下面增加内容<code>type: categories</code><br>如果有集成评论服务，页面也会带有评论。可以增加内容<code>comments: false</code>关闭</p>
+</li>
+<li><p>修改主题配置文件的 menu，开启categories功能</p>
+</li>
+</ol>
+<p>以后在文章的Front-matter部分增加categories就会自动分类</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://www.trbdev.cn/2021/10/30/hexo-theme-next/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -203,8 +299,21 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-31 01:26:23" itemprop="dateModified" datetime="2021-10-31T01:26:23+08:00">2021-10-31</time>
+        <time title="修改时间：2021-10-31 03:05:50" itemprop="dateModified" datetime="2021-10-31T03:05:50+08:00">2021-10-31</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/next/" itemprop="url" rel="index"><span itemprop="name">next</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -278,7 +387,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/10/25/hexo-abc/" class="post-title-link" itemprop="url">Hexo 入门【windows】</a>
+          <a href="/2021/10/25/hexo-abc/" class="post-title-link" itemprop="url">hexo入门【windows】</a>
         </h2>
 
         <div class="post-meta-container">
@@ -296,8 +405,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-30 22:52:26" itemprop="dateModified" datetime="2021-10-30T22:52:26+08:00">2021-10-30</time>
+        <time title="修改时间：2021-10-31 03:11:37" itemprop="dateModified" datetime="2021-10-31T03:11:37+08:00">2021-10-31</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -316,7 +434,7 @@
 <li>安装Hexo<code>npm install -g hexo-cli</code></li>
 </ol>
 <h2 id="重要命令"><a href="#重要命令" class="headerlink" title="重要命令"></a>重要命令</h2><h3 id="init：初始化网站"><a href="#init：初始化网站" class="headerlink" title="init：初始化网站"></a>init：初始化网站</h3><p><code>hexo init [folder]</code><br>如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br>本命令相当于执行了以下几步：<br>Git clone hexo-starter 和 hexo-theme-landscape 主题到当前目录或指定目录。<br>使用 Yarn 1、pnpm 或 npm 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js 安装。</p>
-<h3 id="new：新建文章"><a href="#new：新建文章" class="headerlink" title="new：新建文章"></a>new：新建文章</h3><p><code>hexo new [layout] &lt;title&gt;</code><br>如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。<br>如果标题包含空格的话，请使用引号括起来。<br><code>hexo new &quot;post title with whitespace&quot;</code></p>
+<h3 id="new：新建文章"><a href="#new：新建文章" class="headerlink" title="new：新建文章"></a>new：新建文章</h3><p><code>hexo new [layout] &lt;title&gt;</code><br>如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。<br>如果标题包含空格的话，请使用引号括起来。<br><code>hexo new &quot;post title with whitespace&quot;</code><br>新建的文章会生成在<code>source/_posts</code>目录下，用markdown的语法编辑文件内容即可</p>
 <h3 id="generate：生成静态文件"><a href="#generate：生成静态文件" class="headerlink" title="generate：生成静态文件"></a>generate：生成静态文件</h3><p><code>hexo generate</code><br>可简写为 hexo g<br><code>hexo g -d</code><br>文件成后立即部署网站</p>
 <h3 id="server：启动服务器"><a href="#server：启动服务器" class="headerlink" title="server：启动服务器"></a>server：启动服务器</h3><p><code>hexo server</code><br>默认情况下，访问网址为： <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
 <h3 id="deploy：部署网站"><a href="#deploy：部署网站" class="headerlink" title="deploy：部署网站"></a>deploy：部署网站</h3><p><code>hexo deploy</code><br>可简写为 hexo d<br><code>hexo d -g</code><br>部署之前预先生成静态文件</p>
