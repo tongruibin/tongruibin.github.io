@@ -211,7 +211,20 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-10-31 03:09:08 / 修改时间：03:29:15" itemprop="dateCreated datePublished" datetime="2021-10-31T03:09:08+08:00">2021-10-31</time>
+      <time title="创建时间：2021-10-31 03:09:08 / 修改时间：03:51:28" itemprop="dateCreated datePublished" datetime="2021-10-31T03:09:08+08:00">2021-10-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/hexo/next/" itemprop="url" rel="index"><span itemprop="name">next</span></a>
+        </span>
     </span>
 
   
@@ -233,16 +246,14 @@
 </li>
 </ol>
 <p>以后在文章的Front-matter部分增加tags就会自动打上标签</p>
-<h2 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h2><ol>
-<li><p>在Hexo 站点目录下。使用 hexo new page 新建一个 categories 页面<br><code>hexo new page categories</code></p>
-</li>
-<li><p>编辑<code>source/categories/index.md</code>文件<br>在文件的Front-matter的title的date下面增加内容<code>type: categories</code><br>如果有集成评论服务，页面也会带有评论。可以增加内容<code>comments: false</code>关闭</p>
-</li>
-<li><p>修改主题配置文件的 menu，开启categories功能</p>
-</li>
-</ol>
-<p>以后在文章的Front-matter部分增加categories就会自动分类</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/10/31/hexo-theme-next-tags-and-categories/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -299,7 +310,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-31 03:05:50" itemprop="dateModified" datetime="2021-10-31T03:05:50+08:00">2021-10-31</time>
+        <time title="修改时间：2021-10-31 03:51:42" itemprop="dateModified" datetime="2021-10-31T03:51:42+08:00">2021-10-31</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -332,23 +343,14 @@
 <li><p>修改_config.yml文件<br>将theme的内容改为next<br><code>theme: next</code></p>
 </li>
 </ol>
-<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>以下内容是修改<code>themes/next/_config.yml</code>文件</p>
-<h3 id="scheme-方案"><a href="#scheme-方案" class="headerlink" title="scheme 方案"></a>scheme 方案</h3><p>next主题可以选择4种scheme，这里选择的是<code>Gemini</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<h3 id="menu-导航菜单"><a href="#menu-导航菜单" class="headerlink" title="menu 导航菜单"></a>menu 导航菜单</h3><p>menu下面的选项，去掉前面的注释即可开启菜单</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  # about: /about/ || fa fa-user</span><br><span class="line">  #tags: /tags/ || fa fa-tags</span><br><span class="line">  # categories: /categories/ || fa fa-th</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  #schedule: /schedule/ || fa fa-calendar</span><br><span class="line">  #sitemap: /sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: /404/ || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
-
-<h3 id="avatar-自定义头像"><a href="#avatar-自定义头像" class="headerlink" title="avatar 自定义头像"></a>avatar 自定义头像</h3><p>将头像图片复制到<code>themes/next/source/images</code>目录下，修改url的内容即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar:</span><br><span class="line">  # Replace the default image and set the url here.</span><br><span class="line">  url: /images/xxx.jpg</span><br><span class="line">  # If true, the avatar will be displayed in circle.</span><br><span class="line">  rounded: true</span><br><span class="line">  # If true, the avatar will be rotated with the cursor.</span><br><span class="line">  rotated: false</span><br></pre></td></tr></table></figure>
-
-<h3 id="social-社交账号"><a href="#social-社交账号" class="headerlink" title="social 社交账号"></a>social 社交账号</h3><p>social下面的选项，去掉前面的注释并修改相应的url即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/tongruibin || fab fa-github</span><br><span class="line">  # E-Mail: mailto:tongruibin@qq.com || fa fa-envelope</span><br><span class="line">  #Weibo: https://weibo.com/yourname || fab fa-weibo</span><br><span class="line">  #Google: https://plus.google.com/yourname || fab fa-google</span><br><span class="line">  #Twitter: https://twitter.com/yourname || fab fa-twitter</span><br><span class="line">  #FB Page: https://www.facebook.com/yourname || fab fa-facebook</span><br><span class="line">  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span><br><span class="line">  #YouTube: https://youtube.com/yourname || fab fa-youtube</span><br><span class="line">  #Instagram: https://instagram.com/yourname || fab fa-instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || fab fa-skype</span><br></pre></td></tr></table></figure>
-
-<h3 id="footer-页脚"><a href="#footer-页脚" class="headerlink" title="footer 页脚"></a>footer 页脚</h3><p>footer下面可以自定义图标，copyright，服务支持，备案信息等等，这里不做展示</p>
-<h3 id="reward-打赏设置"><a href="#reward-打赏设置" class="headerlink" title="reward 打赏设置"></a>reward 打赏设置</h3><p>reward_settings下的enable先设置为true<br>reward下面可以设置微信收款码，支付宝收款码等等<br>将收款码图片复制到<code>themes/next/source/images</code>目录下，修改相应的url的内容即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">reward_settings:</span><br><span class="line">  # If true, a donate button will be displayed in every article by default.</span><br><span class="line">  enable: true</span><br><span class="line">  animation: false</span><br><span class="line">  comment: Buy me a coffee</span><br><span class="line"></span><br><span class="line">reward:</span><br><span class="line">  wechatpay: /images/wechatpay.png</span><br><span class="line">  alipay: /images/alipay.png</span><br><span class="line">  #paypal: /images/paypal.png</span><br><span class="line">  #bitcoin: /images/bitcoin.png</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/10/30/hexo-theme-next/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -405,7 +407,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-31 03:11:37" itemprop="dateModified" datetime="2021-10-31T03:11:37+08:00">2021-10-31</time>
+        <time title="修改时间：2021-10-31 03:54:55" itemprop="dateModified" datetime="2021-10-31T03:54:55+08:00">2021-10-31</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -433,82 +435,14 @@
 <li><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">安装nodejs, 选择windows的LTS版本</a></li>
 <li>安装Hexo<code>npm install -g hexo-cli</code></li>
 </ol>
-<h2 id="重要命令"><a href="#重要命令" class="headerlink" title="重要命令"></a>重要命令</h2><h3 id="init：初始化网站"><a href="#init：初始化网站" class="headerlink" title="init：初始化网站"></a>init：初始化网站</h3><p><code>hexo init [folder]</code><br>如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br>本命令相当于执行了以下几步：<br>Git clone hexo-starter 和 hexo-theme-landscape 主题到当前目录或指定目录。<br>使用 Yarn 1、pnpm 或 npm 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js 安装。</p>
-<h3 id="new：新建文章"><a href="#new：新建文章" class="headerlink" title="new：新建文章"></a>new：新建文章</h3><p><code>hexo new [layout] &lt;title&gt;</code><br>如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。<br>如果标题包含空格的话，请使用引号括起来。<br><code>hexo new &quot;post title with whitespace&quot;</code><br>新建的文章会生成在<code>source/_posts</code>目录下，用markdown的语法编辑文件内容即可</p>
-<h3 id="generate：生成静态文件"><a href="#generate：生成静态文件" class="headerlink" title="generate：生成静态文件"></a>generate：生成静态文件</h3><p><code>hexo generate</code><br>可简写为 hexo g<br><code>hexo g -d</code><br>文件成后立即部署网站</p>
-<h3 id="server：启动服务器"><a href="#server：启动服务器" class="headerlink" title="server：启动服务器"></a>server：启动服务器</h3><p><code>hexo server</code><br>默认情况下，访问网址为： <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
-<h3 id="deploy：部署网站"><a href="#deploy：部署网站" class="headerlink" title="deploy：部署网站"></a>deploy：部署网站</h3><p><code>hexo deploy</code><br>可简写为 hexo d<br><code>hexo d -g</code><br>部署之前预先生成静态文件</p>
-<h3 id="clean：清除缓存文件-db-json-和已生成的静态文件-public"><a href="#clean：清除缓存文件-db-json-和已生成的静态文件-public" class="headerlink" title="clean：清除缓存文件 (db.json) 和已生成的静态文件 (public)"></a>clean：清除缓存文件 (db.json) 和已生成的静态文件 (public)</h3><p><code>hexo clean</code><br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>主配置文件</p>
-<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>应用程序信息</p>
-<h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p>模板文件夹<br>当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
-<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>除<code>_posts</code>文件夹之外，开头命名为<code>_</code>(下划线)的文件 / 文件夹和隐藏的文件将会被忽略。<br>Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</p>
-<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>主题文件夹。Hexo 会根据主题来生成静态页面。</p>
-<h2 id="重要配置"><a href="#重要配置" class="headerlink" title="重要配置"></a>重要配置</h2><p>主配置文件 _config.yml</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>title</td>
-<td align="left">网站标题</td>
-</tr>
-<tr>
-<td>subtitle</td>
-<td align="left">网站副标题</td>
-</tr>
-<tr>
-<td>description</td>
-<td align="left">网站描述</td>
-</tr>
-<tr>
-<td>keywords</td>
-<td align="left">网站的关键词。支持多个关键词。</td>
-</tr>
-<tr>
-<td>author</td>
-<td align="left">你的名字</td>
-</tr>
-<tr>
-<td>language</td>
-<td align="left">网站使用的语言。</td>
-</tr>
-<tr>
-<td>timezone</td>
-<td align="left">网站时区。Hexo 默认使用您电脑的时区。</td>
-</tr>
-<tr>
-<td>url</td>
-<td align="left">网址, 必须以 http:// 或 https:// 开头（本地，github，自己域名）</td>
-</tr>
-</tbody></table>
-<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><ol>
-<li><p>在github上 创建 <code>[username].github.io</code> 仓库，username是你的github用户名</p>
-</li>
-<li><p>将本地的id_rsa.pub文件（一般在<code>C:\Users\[user]\.ssh</code>下）内容复制到settings的 Deploy keys。<br>如果没有，则在git bash里用命令行生成<code>ssh-keygen -t rsa -C &quot;youremail&quot;</code></p>
-</li>
-<li><p>在github上settings-&gt; Developer settings -&gt; Personal access tokens，生成个人访问密令<br>并记录，用于本地远程发布github代码，hexo部署代码的时候需要用到</p>
-</li>
-<li><p>修改hexo的_config.yml配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/[username]/[username].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>以上的username需替换为自己的github用户名</p>
-</li>
-<li><p>命令行一键部署</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<p>一般会出现github需要你输入的个人访问密令，将上面的密令输入即可，密码登录是无效的。<br>此时，等待github发布即可访问<code>https://[username].github.io</code></p>
-</li>
-</ol>
-<h2 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h2><ol>
-<li><p>个人域名指向[username].github.io<br>本人的域名是在腾讯云买的，所以在腾讯云的后台找到自己的域名管理页面解析域名。<br>添加一个域名解析<br>主机记录为www，记录类型为CNAME，记录值为[username].github.io<br>等待记录生效即可<br>同时可以申请免费的ssl证书，使域名可以使用https</p>
-</li>
-<li><p>github上绑定个人域名<br>你的[username].github.io仓库-&gt;settings-&gt;pages，在custom domain里输入你的个人域名后保存。<br>同时可以开启Enforce https。</p>
-</li>
-</ol>
-<p>此时，你可以通过访问个人域名浏览hexo的内容了。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/10/25/hexo-abc/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
