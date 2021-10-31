@@ -43,6 +43,7 @@
   <script async src="https://hm.baidu.com/hm.js?9d4514cbd8a67fc00cef40efb24456bd"></script>
 
 
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
@@ -92,41 +93,6 @@
 
 
 
-<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript">
-/* 鼠标特效 */
-var a_idx = 0;
-jQuery(document).ready(function($) {
-    $("body").click(function(e) {
-        var a = new Array(
-            "❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤",
-            "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤",
-            "❤爱国❤", "❤敬业❤", "❤诚信❤", "❤友善❤"
-        );
-        var $i = $("<span></span>").text(a[a_idx]);
-        a_idx = (a_idx + 1) % a.length;
-        var x = e.pageX,
-        y = e.pageY;
-        $i.css({
-            "z-index": 1,
-            "top": y - 20,
-            "left": x,
-            "position": "absolute",
-            "font-weight": "bold",
-            "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
-        });
-        $("body").append($i);
-        $i.animate({
-            "top": y - 180,
-            "opacity": 0
-        },
-        1500,
-        function() {
-            $i.remove();
-        });
-    });
-});
-</script>
 <style type="text/css">
 select {
     width: 220px;
@@ -156,6 +122,13 @@ select {
 <iframe id="wyyyy" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86
     src="//music.163.com/outchain/player?type=2&id=27533136&auto=0&height=66"></iframe>
 <script>
+window.onload=function() {
+    let sel = document.getElementById("musicSelect");
+    sel.onchange() = function() {
+        document.getElementById('wyyyy').src= "//music.163.com/outchain/player?type=2&id="
+            + $("#musicSelect").val() +"&auto=1&height=66"
+    }
+}
     $("#musicSelect").change(function(){
         document.getElementById('wyyyy').src= "//music.163.com/outchain/player?type=2&id="
             + $("#musicSelect").val() +"&auto=1&height=66"
@@ -405,6 +378,41 @@ select {
         document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
     }
 setInterval("createtime()",250);
+</script>
+
+<script type="text/javascript">
+/* 鼠标特效 */
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+        var a = new Array(
+            "❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤",
+            "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤",
+            "❤爱国❤", "❤敬业❤", "❤诚信❤", "❤友善❤"
+        );
+        var $i = $("<span></span>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+            "z-index": 1,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+});
 </script>
 
 
