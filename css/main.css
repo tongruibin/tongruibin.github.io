@@ -2173,6 +2173,13 @@ pre code {
 .post-block:last-of-type .post-eof {
   display: none;
 }
+.post-copyright ul {
+  list-style: none;
+  padding: 0.5em 1em;
+  background: var(--card-bg-color);
+  border-left: 3px solid #ff2a2a;
+  margin: 1em 0 0;
+}
 .post-tags {
   margin-top: 40px;
   text-align: center;
@@ -2792,4 +2799,130 @@ ul.breadcrumb li:last-child {
   .comments {
     padding: 10px 12px;
   }
+}
+/*
+// 文本居中
+.index .post-body{
+    text-align: center !important;
+}
+*/
+.medium-zoom-image {
+  box-shadow: 0 10px 30px 0px rgba(0,0,0,0.4);
+}
+code {
+  background: #64dfdf;
+  color: #383a42;
+}
+/*
+// 隐藏顶部黑线条
+.headband {
+  display: none;
+}
+*/
+.footer-inner {
+  color: #07031a;
+}
+::selection {
+  background: rgba(0,149,255,0.2);
+  color: #555;
+}
+::-moz-selection {
+  background: rgba(0,149,255,0.2);
+  color: #555;
+}
+.table-container {
+  scrollbar-width: thin;
+}
+.table-container::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+.table-container::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #00af91;
+}
+.table-container::-webkit-scrollbar-track {
+  background: none;
+}
+body {
+  background-image: url("https://此处修改为你的背景图片直链");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  body {
+    background-size: auto auto;
+  }
+}
+.main-inner {
+  opacity: 0.95;
+}
+.sidebar {
+  opacity: 0.95;
+}
+@media (prefers-color-scheme: dark) {
+  body .header-inner {
+    margin-top: 18px;
+    background: rgba(51,51,51,0.95);
+  }
+}
+.header-inner {
+  margin-top: 18px;
+  background: rgba(255,255,255,0.95);
+}
+.popup {
+  opacity: 0.95;
+}
+/*
+// 顶部渐变色
+.site-brand-container {
+background-image: linear-gradient(356deg, #fff, #eee, #ddd, #ccc);
+}
+*/
+.main {
+  margin: 8px auto 0;
+}
+@media (max-width: 767px) {
+  .header {
+    padding: 8px;
+  }
+}
+.header-inner {
+  border-radius: 50px 50px 18px 18px;
+}
+.site-brand-container {
+  border-radius: 18px 18px 0 0;
+}
+@media (max-width: 767px) {
+  .site-brand-container {
+    border-radius: 18px;
+  }
+}
+.sidebar-inner {
+  border-radius: 18px;
+}
+.back-to-top {
+  border-radius: 0 0 18px 18px;
+}
+.post-block {
+  border-radius: 18px !important;
+  margin-top: 18px;
+}
+.pagination {
+  border-radius: 18px !important;
+}
+.comments {
+  border-radius: 18px !important;
+}
+.post-body {
+  font-size: 1em;
+}
+.theme-link {
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+.theme-link:hover {
+  color: #333;
+  border-bottom: 1px solid #333;
 }
