@@ -4,25 +4,25 @@
     <title>next主题进阶应用</title>
     <url>/2021/10/31/hexo-theme-next-advanced/</url>
     <content><![CDATA[<h2 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h2><ol>
-<li><p>在Hexo 站点目录下。使用 hexo new page 新建一个 tags 页面<br><code>hexo new page tags</code></p>
+<li><p>在 Hexo 站点目录下新建一个 tags 页面<br><code>hexo new page tags</code></p>
 </li>
 <li><p>编辑<code>source/tags/index.md</code>文件<br>在文件的Front-matter的title的date下面增加内容<code>type: tags</code><br>如果有集成评论服务，页面也会带有评论。可以增加内容<code>comments: false</code>关闭</p>
 </li>
 <li><p>修改主题配置文件的 menu，开启tags功能</p>
 </li>
 </ol>
-<p>以后在文章的Front-matter部分增加tags就会自动打上标签</p>
+<p>以后在文章的Front-matter部分增加tags就会给文章自动打上标签</p>
 <span id="more"></span>
 
 <h2 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h2><ol>
-<li><p>在Hexo 站点目录下。使用 hexo new page 新建一个 categories 页面<br><code>hexo new page categories</code></p>
+<li><p>在 Hexo 站点目录下新建一个 categories 页面<br><code>hexo new page categories</code></p>
 </li>
 <li><p>编辑<code>source/categories/index.md</code>文件<br>在文件的Front-matter的title的date下面增加内容<code>type: categories</code><br>如果有集成评论服务，页面也会带有评论。可以增加内容<code>comments: false</code>关闭</p>
 </li>
 <li><p>修改主题配置文件的 menu，开启categories功能</p>
 </li>
 </ol>
-<p>以后在文章的Front-matter部分增加categories就会自动分类</p>
+<p>以后在文章的Front-matter部分增加categories就会给文章自动分类</p>
 <h2 id="自定义文件"><a href="#自定义文件" class="headerlink" title="自定义文件"></a>自定义文件</h2><p>next的主题配置文件中<code>custom_file_path</code>即是自定义文件的位置<br>自定义文件目录：<code>source/_data/</code>，在该目录下可以建立自定义的文件，<br>可以补充html，js，css等功能</p>
 <h2 id="文章字数统计和阅读时长"><a href="#文章字数统计和阅读时长" class="headerlink" title="文章字数统计和阅读时长"></a>文章字数统计和阅读时长</h2><ol>
 <li><p>新增hexo站点配置文件设置</p>
@@ -57,14 +57,14 @@
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
 <li><a href="https://gitforwindows.org/">安装git</a></li>
 <li><a href="https://nodejs.org/en/download/">安装nodejs, 选择windows的LTS版本</a></li>
-<li>安装Hexo<code>npm install -g hexo-cli</code></li>
+<li>安装Hexo<code>npm install -g hexo-cli</code><br>小白注意<br>上面的命令用git自带的bash命令行就可以<br>右键找到<code>Git Bash Here</code>点击进入命令行模式</li>
 </ol>
 <span id="more"></span>
 
 <h2 id="重要命令"><a href="#重要命令" class="headerlink" title="重要命令"></a>重要命令</h2><h3 id="init：初始化网站"><a href="#init：初始化网站" class="headerlink" title="init：初始化网站"></a>init：初始化网站</h3><p><code>hexo init [folder]</code><br>如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br>本命令相当于执行了以下几步：<br>Git clone hexo-starter 和 hexo-theme-landscape 主题到当前目录或指定目录。<br>使用 Yarn 1、pnpm 或 npm 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js 安装。</p>
 <h3 id="new：新建文章"><a href="#new：新建文章" class="headerlink" title="new：新建文章"></a>new：新建文章</h3><p><code>hexo new [layout] &lt;title&gt;</code><br>如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替，默认是 post。<br>post类型的文章会生成在<code>source/_posts</code>目录下，用markdown的语法编辑文件内容即可<br>如果标题包含空格的话，请使用引号括起来。<br><code>hexo new &quot;post title with whitespace&quot;</code></p>
 <h3 id="generate：生成静态文件"><a href="#generate：生成静态文件" class="headerlink" title="generate：生成静态文件"></a>generate：生成静态文件</h3><p><code>hexo generate</code><br>可简写为 hexo g<br><code>hexo g -d</code><br>文件成后立即部署网站</p>
-<h3 id="server：启动服务器"><a href="#server：启动服务器" class="headerlink" title="server：启动服务器"></a>server：启动服务器</h3><p><code>hexo server</code><br>默认情况下，访问网址为： <a href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
+<h3 id="server：启动服务器"><a href="#server：启动服务器" class="headerlink" title="server：启动服务器"></a>server：启动服务器</h3><p><code>hexo server</code><br>默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
 <h3 id="deploy：部署网站"><a href="#deploy：部署网站" class="headerlink" title="deploy：部署网站"></a>deploy：部署网站</h3><p><code>hexo deploy</code><br>可简写为 hexo d<br><code>hexo d -g</code><br>部署之前预先生成静态文件</p>
 <h3 id="clean：清除缓存和静态文件"><a href="#clean：清除缓存和静态文件" class="headerlink" title="clean：清除缓存和静态文件"></a>clean：清除缓存和静态文件</h3><p><code>hexo clean</code><br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
 <h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>主配置文件</p>
@@ -113,6 +113,12 @@
 <td align="left">网址, 必须以 http:// 或 https:// 开头（本地，github，自己域名）</td>
 </tr>
 </tbody></table>
+<h2 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h2><h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>常见的参数有tags，categories，comments等等<br>这个特性<a href="/2021/10/31/hexo-theme-next-advanced/" title="[hexo主题next进阶应用]">[hexo主题next进阶应用]</a>- 添加标签和分页 有用到</p>
+<h3 id="标签插件（Tag-Plugins）"><a href="#标签插件（Tag-Plugins）" class="headerlink" title="标签插件（Tag Plugins）"></a>标签插件（Tag Plugins）</h3><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。<br>虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。<br>更多内容详见<a href="https://hexo.io/zh-cn/docs/tag-plugins" title="" target="">Hexo 标签插件</a></p>
+<h3 id="资源文件夹"><a href="#资源文件夹" class="headerlink" title="资源文件夹"></a>资源文件夹</h3><p>资源（Asset）代表 source 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。<br>更多内容详见<a href="https://hexo.io/zh-cn/docs/asset-folders" title="" target="">Hexo 资源文件夹</a></p>
+<h3 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h3><p>一般用于自定义的文件，目录是<code>source/_data</code><br>这个特性<a href="/2021/10/31/hexo-theme-next-advanced/" title="[hexo主题next进阶应用]">[hexo主题next进阶应用]</a> - 自定义文件 有用到</p>
 <h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><ol>
 <li><p>在github上 创建 <code>[username].github.io</code> 仓库，username是你的github用户名</p>
 </li>
@@ -125,18 +131,21 @@
 <p>以上的username需替换为自己的github用户名</p>
 </li>
 <li><p>命令行一键部署</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<p>一般会出现github需要你输入的个人访问密令，将上面的密令输入即可，密码登录是无效的。<br>此时，等待github发布即可访问<code>https://[username].github.io</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>首次部署一般会出现github需要你输入的个人访问密令，将上面的密令输入即可，密码登录是无效的。<br>此时，等待github发布即可访问<code>https://[username].github.io</code></p>
 </li>
 </ol>
 <h2 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h2><ol>
 <li><p>个人域名指向[username].github.io<br>本人的域名是在腾讯云买的，所以在腾讯云的后台找到自己的域名管理页面解析域名。<br>添加一个域名解析<br>主机记录为www，记录类型为CNAME，记录值为[username].github.io<br>等待记录生效即可<br>同时可以申请免费的ssl证书，使域名可以使用https</p>
 </li>
-<li><p>github上绑定个人域名<br>你的[username].github.io仓库-&gt;settings-&gt;pages，在custom domain里输入你的个人域名后保存。<br>同时可以开启Enforce https。</p>
+<li><p>创建CNAME文件<br>在站点目录的<code>source</code>下，新建CNAME文件，文件内容为你需要绑定的域名（不需要写https://）<br>例：<code>www.xxx.cn</code></p>
 </li>
+<li><p>github上绑定个人域名(不确定这步是否必须，最好做一下吧)<br>你的[username].github.io仓库-&gt;settings-&gt;pages，在custom domain里输入你的个人域名后保存。<br>同时可以开启Enforce https。</p>
+</li>
+<li><p>命令行一键部署</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
 </ol>
-<p>这里可能正确的方式是：<br>在<code>source</code>目录下，新建CNAME文件，文件内容为你需要绑定的域名（不需要写https://）</p>
-<p>此时，你可以通过访问个人域名浏览hexo的内容了。</p>
+<p>发布成功后，你可以通过访问个人域名浏览hexo的内容了。</p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -157,7 +166,7 @@
 </ol>
 <span id="more"></span>
 
-<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>以下内容是修改主题配置文件（注意和站点配置文件区分）<br>npm的方式：<code>node_modules/hexo-theme-next/_config.yml</code>文件<br>git的方式：<code>themes/next/_config.yml</code>文件</p>
+<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>以下内容是修改主题配置文件（注意和站点配置文件区分）<br>npm的方式：<code>node_modules/hexo-theme-next/_config.yml</code>文件<br>git的方式：<code>themes/next/_config.yml</code>文件<br>这里只介绍了部分配置，更多配置可以阅读官方文档自行探索</p>
 <h3 id="scheme-方案"><a href="#scheme-方案" class="headerlink" title="scheme 方案"></a>scheme 方案</h3><p>next主题可以选择4种scheme，这里选择的是<code>Gemini</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
 
@@ -169,7 +178,7 @@
 </li>
 <li><p>将头像放在next主题的目录<code>/source/images</code>下并修改相应的url<code>/images/xxx.jpg</code></p>
 </li>
-<li><p>图片的绝对地址</p>
+<li><p>图片的互联网地址</p>
 </li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar:</span><br><span class="line">  # Replace the default image and set the url here.</span><br><span class="line">  url: /images/xxx.jpg</span><br><span class="line">  # If true, the avatar will be displayed in circle.</span><br><span class="line">  rounded: true</span><br><span class="line">  # If true, the avatar will be rotated with the cursor.</span><br><span class="line">  rotated: false</span><br></pre></td></tr></table></figure>
