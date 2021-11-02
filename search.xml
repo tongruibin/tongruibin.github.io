@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>next主题进阶应用</title>
+    <url>/2021/10/31/hexo-theme-next-advanced/</url>
+    <content><![CDATA[<h2 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h2><ol>
+<li><p>在 Hexo 站点目录下新建一个 tags 页面<br><code>hexo new page tags</code></p>
+</li>
+<li><p>编辑<code>source/tags/index.md</code>文件<br>在文件的Front-matter的title的date下面增加内容<code>type: tags</code><br>如果有集成评论服务，页面也会带有评论。可以增加内容<code>comments: false</code>关闭</p>
+</li>
+<li><p>修改主题配置文件的 menu，开启tags功能</p>
+</li>
+</ol>
+<p>以后在文章的Front-matter部分增加tags就会给文章自动打上标签</p>
+<span id="more"></span>
+
+<h2 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h2><ol>
+<li><p>在 Hexo 站点目录下新建一个 categories 页面<br><code>hexo new page categories</code></p>
+</li>
+<li><p>编辑<code>source/categories/index.md</code>文件<br>在文件的Front-matter的title的date下面增加内容<code>type: categories</code><br>如果有集成评论服务，页面也会带有评论。可以增加内容<code>comments: false</code>关闭</p>
+</li>
+<li><p>修改主题配置文件的 menu，开启categories功能</p>
+</li>
+</ol>
+<p>以后在文章的Front-matter部分增加categories就会给文章自动分类</p>
+<h2 id="自定义文件"><a href="#自定义文件" class="headerlink" title="自定义文件"></a>自定义文件</h2><p>next的主题配置文件中<code>custom_file_path</code>即是自定义文件的位置<br>自定义文件目录：<code>source/_data/</code>，在该目录下可以建立自定义的文件，<br>可以补充html，js，css等功能</p>
+<h2 id="文章字数统计和阅读时长"><a href="#文章字数统计和阅读时长" class="headerlink" title="文章字数统计和阅读时长"></a>文章字数统计和阅读时长</h2><ol>
+<li><p>新增hexo站点配置文件设置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true                # 文章字数统计</span><br><span class="line">  time: true                   # 文章阅读时长</span><br><span class="line">  total_symbols: true          # 站点总字数统计</span><br><span class="line">  total_time: true             # 站点总阅读时长</span><br><span class="line">  awl: 4                       # Average Word Length（平均字长）</span><br><span class="line">  wpm: 275                     # Words Per Minute（每分钟阅读词数）</span><br></pre></td></tr></table></figure></li>
+<li><p>修改next主题配置文件设置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true     # 是否另起一行（true的话不和发表时间等同一行）</span><br><span class="line">  item_text_total: true    # 页面底部统计数量前是否显示文字描述（站点总字数、站点阅读时长）</span><br></pre></td></tr></table></figure></li>
+<li><p>安装插件<code>npm install hexo-word-counter</code><br>重新启动服务，不出意外的话就成功了。</p>
+</li>
+</ol>
+<h2 id="本地搜索"><a href="#本地搜索" class="headerlink" title="本地搜索"></a>本地搜索</h2><ol>
+<li><p>站点目录下，执行命令<code>npm install hexo-generator-searchdb</code></p>
+</li>
+<li><p>站点配置文件新增内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: true</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure></li>
+<li><p>主题配置文件开启本地搜索功能</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Local Search</span><br><span class="line"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # If auto, trigger search by changing input.</span><br><span class="line">  # If manual, trigger search by pressing enter key or search button.</span><br><span class="line">  trigger: auto</span><br><span class="line">  # Show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # Unescape html strings to the readable one.</span><br><span class="line">  unescape: false</span><br><span class="line">  # Preload the search data when the page loads.</span><br><span class="line">  preload: false</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>hexo</category>
+        <category>hexo-theme-next</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>hexo-theme-next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo入门【windows】</title>
     <url>/2021/10/25/hexo-abc/</url>
     <content><![CDATA[<h2 id="hexo文档"><a href="#hexo文档" class="headerlink" title="hexo文档"></a>hexo文档</h2><p><a href="https://hexo.io/zh-cn/docs/">hexo文档</a></p>
@@ -63,7 +113,7 @@
 <td align="left">网址, 必须以 http:// 或 https:// 开头（本地，github，自己域名）</td>
 </tr>
 </tbody></table>
-<h2 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h2><h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p>Front-matter 是文件最上方以 — 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<h2 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h2><h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>常见的参数有tags，categories，comments等等<br>这个特性<a href="/2021/10/31/hexo-theme-next-advanced/" title="[hexo主题next进阶应用]">[hexo主题next进阶应用]</a>- 添加标签和分页 有用到</p>
 <h3 id="标签插件（Tag-Plugins）"><a href="#标签插件（Tag-Plugins）" class="headerlink" title="标签插件（Tag Plugins）"></a>标签插件（Tag Plugins）</h3><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。<br>虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。<br>更多内容详见<a href="https://hexo.io/zh-cn/docs/tag-plugins" title="" target="">Hexo 标签插件</a></p>
@@ -102,56 +152,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>next主题进阶应用</title>
-    <url>/2021/10/31/hexo-theme-next-advanced/</url>
-    <content><![CDATA[<h2 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h2><ol>
-<li><p>在 Hexo 站点目录下新建一个 tags 页面<br><code>hexo new page tags</code></p>
-</li>
-<li><p>编辑<code>source/tags/index.md</code>文件<br>在文件的Front-matter的title的date下面增加内容<code>type: tags</code><br>如果有集成评论服务，页面也会带有评论。可以增加内容<code>comments: false</code>关闭</p>
-</li>
-<li><p>修改主题配置文件的 menu，开启tags功能</p>
-</li>
-</ol>
-<p>以后在文章的Front-matter部分增加tags就会给文章自动打上标签</p>
-<span id="more"></span>
-
-<h2 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h2><ol>
-<li><p>在 Hexo 站点目录下新建一个 categories 页面<br><code>hexo new page categories</code></p>
-</li>
-<li><p>编辑<code>source/categories/index.md</code>文件<br>在文件的Front-matter的title的date下面增加内容<code>type: categories</code><br>如果有集成评论服务，页面也会带有评论。可以增加内容<code>comments: false</code>关闭</p>
-</li>
-<li><p>修改主题配置文件的 menu，开启categories功能</p>
-</li>
-</ol>
-<p>以后在文章的Front-matter部分增加categories就会给文章自动分类</p>
-<h2 id="自定义文件"><a href="#自定义文件" class="headerlink" title="自定义文件"></a>自定义文件</h2><p>next的主题配置文件中<code>custom_file_path</code>即是自定义文件的位置<br>自定义文件目录：<code>source/_data/</code>，在该目录下可以建立自定义的文件，<br>可以补充html，js，css等功能</p>
-<h2 id="文章字数统计和阅读时长"><a href="#文章字数统计和阅读时长" class="headerlink" title="文章字数统计和阅读时长"></a>文章字数统计和阅读时长</h2><ol>
-<li><p>新增hexo站点配置文件设置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true                # 文章字数统计</span><br><span class="line">  time: true                   # 文章阅读时长</span><br><span class="line">  total_symbols: true          # 站点总字数统计</span><br><span class="line">  total_time: true             # 站点总阅读时长</span><br><span class="line">  awl: 4                       # Average Word Length（平均字长）</span><br><span class="line">  wpm: 275                     # Words Per Minute（每分钟阅读词数）</span><br></pre></td></tr></table></figure></li>
-<li><p>修改next主题配置文件设置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true     # 是否另起一行（true的话不和发表时间等同一行）</span><br><span class="line">  item_text_total: true    # 页面底部统计数量前是否显示文字描述（站点总字数、站点阅读时长）</span><br></pre></td></tr></table></figure></li>
-<li><p>安装插件<code>npm install hexo-word-counter</code><br>重新启动服务，不出意外的话就成功了。</p>
-</li>
-</ol>
-<h2 id="本地搜索"><a href="#本地搜索" class="headerlink" title="本地搜索"></a>本地搜索</h2><ol>
-<li><p>站点目录下，执行命令<code>npm install hexo-generator-searchdb</code></p>
-</li>
-<li><p>站点配置文件新增内容</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  content: true</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure></li>
-<li><p>主题配置文件开启本地搜索功能</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Local Search</span><br><span class="line"># Dependencies: https://github.com/next-theme/hexo-generator-searchdb</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # If auto, trigger search by changing input.</span><br><span class="line">  # If manual, trigger search by pressing enter key or search button.</span><br><span class="line">  trigger: auto</span><br><span class="line">  # Show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # Unescape html strings to the readable one.</span><br><span class="line">  unescape: false</span><br><span class="line">  # Preload the search data when the page loads.</span><br><span class="line">  preload: false</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>hexo</category>
-        <category>hexo-theme-next</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>hexo-theme-next</tag>
       </tags>
   </entry>
   <entry>
