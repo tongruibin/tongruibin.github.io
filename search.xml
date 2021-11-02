@@ -51,6 +51,51 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo主题next及其基本配置</title>
+    <url>/2021/10/30/hexo-theme-next/</url>
+    <content><![CDATA[<h2 id="hexo-主题"><a href="#hexo-主题" class="headerlink" title="hexo 主题"></a>hexo 主题</h2><p><a href="https://hexo.io/themes/">hexo 主题</a><br><a href="https://theme-next.js.org/docs/">next 文档</a></p>
+<h2 id="更换主题为next"><a href="#更换主题为next" class="headerlink" title="更换主题为next"></a>更换主题为next</h2><ol>
+<li><p>下载next主题<br>在主目录下，以下方式任选一种<br>npm：<code>npm install hexo-theme-next</code><br>git:<code>git clone https://github.com/next-theme/hexo-theme-next themes/next</code><br>两者的区别在于next主题的目录不同<br>npm的方式：<code>node_modules/hexo-theme-next/</code>目录<br>git的方式：<code>themes/next/</code>目录</p>
+</li>
+<li><p>修改_config.yml文件<br>将theme的内容改为next<br><code>theme: next</code></p>
+</li>
+</ol>
+<span id="more"></span>
+
+<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>以下内容是修改主题配置文件（注意和站点配置文件区分）<br>npm的方式：<code>node_modules/hexo-theme-next/_config.yml</code>文件<br>git的方式：<code>themes/next/_config.yml</code>文件<br>这里只介绍了部分配置，更多配置可以阅读官方文档自行探索</p>
+<h3 id="scheme-方案"><a href="#scheme-方案" class="headerlink" title="scheme 方案"></a>scheme 方案</h3><p>next主题可以选择4种scheme，这里选择的是<code>Gemini</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<h3 id="menu-导航菜单"><a href="#menu-导航菜单" class="headerlink" title="menu 导航菜单"></a>menu 导航菜单</h3><p>menu下面的选项，去掉前面的注释即可开启菜单</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  # about: /about/ || fa fa-user</span><br><span class="line">  #tags: /tags/ || fa fa-tags</span><br><span class="line">  # categories: /categories/ || fa fa-th</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  #schedule: /schedule/ || fa fa-calendar</span><br><span class="line">  #sitemap: /sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: /404/ || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+
+<h3 id="avatar-自定义头像"><a href="#avatar-自定义头像" class="headerlink" title="avatar 自定义头像"></a>avatar 自定义头像</h3><ol>
+<li><p>将头像放在hexo站点的目录<code>source/uploads/</code>下并修改相应的url<code>/uploads/xxx.jpg</code></p>
+</li>
+<li><p>将头像放在next主题的目录<code>/source/images</code>下并修改相应的url<code>/images/xxx.jpg</code></p>
+</li>
+<li><p>图片的互联网地址</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar:</span><br><span class="line">  # Replace the default image and set the url here.</span><br><span class="line">  url: /images/xxx.jpg</span><br><span class="line">  # If true, the avatar will be displayed in circle.</span><br><span class="line">  rounded: true</span><br><span class="line">  # If true, the avatar will be rotated with the cursor.</span><br><span class="line">  rotated: false</span><br></pre></td></tr></table></figure>
+
+<h3 id="social-社交账号"><a href="#social-社交账号" class="headerlink" title="social 社交账号"></a>social 社交账号</h3><p>social下面的选项，去掉前面的注释并修改相应的url即可</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/tongruibin || fab fa-github</span><br><span class="line">  # E-Mail: mailto:tongruibin@qq.com || fa fa-envelope</span><br><span class="line">  #Weibo: https://weibo.com/yourname || fab fa-weibo</span><br><span class="line">  #Google: https://plus.google.com/yourname || fab fa-google</span><br><span class="line">  #Twitter: https://twitter.com/yourname || fab fa-twitter</span><br><span class="line">  #FB Page: https://www.facebook.com/yourname || fab fa-facebook</span><br><span class="line">  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span><br><span class="line">  #YouTube: https://youtube.com/yourname || fab fa-youtube</span><br><span class="line">  #Instagram: https://instagram.com/yourname || fab fa-instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || fab fa-skype</span><br></pre></td></tr></table></figure>
+
+<h3 id="footer-页脚"><a href="#footer-页脚" class="headerlink" title="footer 页脚"></a>footer 页脚</h3><p>footer下面可以自定义图标，copyright，服务支持，备案信息等等，这里不做展示</p>
+<h3 id="reward-打赏设置"><a href="#reward-打赏设置" class="headerlink" title="reward 打赏设置"></a>reward 打赏设置</h3><p>reward_settings下的enable先设置为true<br>reward下面可以设置微信收款码，支付宝收款码等等<br>将收款码图片复制到<code>themes/next/source/images</code>目录下，修改相应的url的内容即可</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reward_settings:</span><br><span class="line">  # If true, a donate button will be displayed in every article by default.</span><br><span class="line">  enable: true</span><br><span class="line">  animation: false</span><br><span class="line">  comment: Buy me a coffee</span><br><span class="line"></span><br><span class="line">reward:</span><br><span class="line">  wechatpay: /images/wechatpay.png</span><br><span class="line">  alipay: /images/alipay.png</span><br><span class="line">  #paypal: /images/paypal.png</span><br><span class="line">  #bitcoin: /images/bitcoin.png</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>hexo</category>
+        <category>hexo-theme-next</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>hexo-theme-next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo入门【windows】</title>
     <url>/2021/10/25/hexo-abc/</url>
     <content><![CDATA[<h2 id="hexo文档"><a href="#hexo文档" class="headerlink" title="hexo文档"></a>hexo文档</h2><p><a href="https://hexo.io/zh-cn/docs/">hexo文档</a></p>
@@ -152,51 +197,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo主题next及其基本配置</title>
-    <url>/2021/10/30/hexo-theme-next/</url>
-    <content><![CDATA[<h2 id="hexo-主题"><a href="#hexo-主题" class="headerlink" title="hexo 主题"></a>hexo 主题</h2><p><a href="https://hexo.io/themes/">hexo 主题</a><br><a href="https://theme-next.js.org/docs/">next 文档</a></p>
-<h2 id="更换主题为next"><a href="#更换主题为next" class="headerlink" title="更换主题为next"></a>更换主题为next</h2><ol>
-<li><p>下载next主题<br>在主目录下，以下方式任选一种<br>npm：<code>npm install hexo-theme-next</code><br>git:<code>git clone https://github.com/next-theme/hexo-theme-next themes/next</code></p>
-</li>
-<li><p>修改_config.yml文件<br>将theme的内容改为next<br><code>theme: next</code></p>
-</li>
-</ol>
-<span id="more"></span>
-
-<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>以下内容是修改主题配置文件（注意和站点配置文件区分）<br>npm的方式：<code>node_modules/hexo-theme-next/_config.yml</code>文件<br>git的方式：<code>themes/next/_config.yml</code>文件<br>这里只介绍了部分配置，更多配置可以阅读官方文档自行探索</p>
-<h3 id="scheme-方案"><a href="#scheme-方案" class="headerlink" title="scheme 方案"></a>scheme 方案</h3><p>next主题可以选择4种scheme，这里选择的是<code>Gemini</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<h3 id="menu-导航菜单"><a href="#menu-导航菜单" class="headerlink" title="menu 导航菜单"></a>menu 导航菜单</h3><p>menu下面的选项，去掉前面的注释即可开启菜单</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  # about: /about/ || fa fa-user</span><br><span class="line">  #tags: /tags/ || fa fa-tags</span><br><span class="line">  # categories: /categories/ || fa fa-th</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  #schedule: /schedule/ || fa fa-calendar</span><br><span class="line">  #sitemap: /sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: /404/ || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
-
-<h3 id="avatar-自定义头像"><a href="#avatar-自定义头像" class="headerlink" title="avatar 自定义头像"></a>avatar 自定义头像</h3><ol>
-<li><p>将头像放在hexo站点的目录<code>source/uploads/</code>下并修改相应的url<code>/uploads/xxx.jpg</code></p>
-</li>
-<li><p>将头像放在next主题的目录<code>/source/images</code>下并修改相应的url<code>/images/xxx.jpg</code></p>
-</li>
-<li><p>图片的互联网地址</p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar:</span><br><span class="line">  # Replace the default image and set the url here.</span><br><span class="line">  url: /images/xxx.jpg</span><br><span class="line">  # If true, the avatar will be displayed in circle.</span><br><span class="line">  rounded: true</span><br><span class="line">  # If true, the avatar will be rotated with the cursor.</span><br><span class="line">  rotated: false</span><br></pre></td></tr></table></figure>
-
-<h3 id="social-社交账号"><a href="#social-社交账号" class="headerlink" title="social 社交账号"></a>social 社交账号</h3><p>social下面的选项，去掉前面的注释并修改相应的url即可</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/tongruibin || fab fa-github</span><br><span class="line">  # E-Mail: mailto:tongruibin@qq.com || fa fa-envelope</span><br><span class="line">  #Weibo: https://weibo.com/yourname || fab fa-weibo</span><br><span class="line">  #Google: https://plus.google.com/yourname || fab fa-google</span><br><span class="line">  #Twitter: https://twitter.com/yourname || fab fa-twitter</span><br><span class="line">  #FB Page: https://www.facebook.com/yourname || fab fa-facebook</span><br><span class="line">  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow</span><br><span class="line">  #YouTube: https://youtube.com/yourname || fab fa-youtube</span><br><span class="line">  #Instagram: https://instagram.com/yourname || fab fa-instagram</span><br><span class="line">  #Skype: skype:yourname?call|chat || fab fa-skype</span><br></pre></td></tr></table></figure>
-
-<h3 id="footer-页脚"><a href="#footer-页脚" class="headerlink" title="footer 页脚"></a>footer 页脚</h3><p>footer下面可以自定义图标，copyright，服务支持，备案信息等等，这里不做展示</p>
-<h3 id="reward-打赏设置"><a href="#reward-打赏设置" class="headerlink" title="reward 打赏设置"></a>reward 打赏设置</h3><p>reward_settings下的enable先设置为true<br>reward下面可以设置微信收款码，支付宝收款码等等<br>将收款码图片复制到<code>themes/next/source/images</code>目录下，修改相应的url的内容即可</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reward_settings:</span><br><span class="line">  # If true, a donate button will be displayed in every article by default.</span><br><span class="line">  enable: true</span><br><span class="line">  animation: false</span><br><span class="line">  comment: Buy me a coffee</span><br><span class="line"></span><br><span class="line">reward:</span><br><span class="line">  wechatpay: /images/wechatpay.png</span><br><span class="line">  alipay: /images/alipay.png</span><br><span class="line">  #paypal: /images/paypal.png</span><br><span class="line">  #bitcoin: /images/bitcoin.png</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>hexo</category>
-        <category>hexo-theme-next</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>hexo-theme-next</tag>
       </tags>
   </entry>
 </search>
