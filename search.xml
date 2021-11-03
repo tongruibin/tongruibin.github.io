@@ -7,8 +7,9 @@
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
 <li><a href="https://gitforwindows.org/">安装git</a></li>
 <li><a href="https://nodejs.org/en/download/">安装nodejs, 选择windows的LTS版本</a></li>
-<li>安装Hexo<code>npm install -g hexo-cli</code><br>小白注意<br>上面的命令用git自带的bash命令行就可以<br>右键找到<code>Git Bash Here</code>点击进入命令行模式</li>
+<li>安装Hexo<code>npm install -g hexo-cli</code></li>
 </ol>
+<p><strong>小白注意</strong><br>上面的命令以及以后的所有命令都可以用git自带的bash命令行<br>右键找到<code>Git Bash Here</code>点击即可进入命令行模式</p>
 <span id="more"></span>
 
 <h2 id="重要命令"><a href="#重要命令" class="headerlink" title="重要命令"></a>重要命令</h2><h3 id="init：初始化网站"><a href="#init：初始化网站" class="headerlink" title="init：初始化网站"></a>init：初始化网站</h3><p><code>hexo init [folder]</code><br>如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br>本命令相当于执行了以下几步：<br>Git clone hexo-starter 和 hexo-theme-landscape 主题到当前目录或指定目录。<br>使用 Yarn 1、pnpm 或 npm 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js 安装。</p>
