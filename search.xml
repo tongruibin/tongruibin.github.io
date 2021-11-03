@@ -1,111 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo入门【windows】</title>
-    <url>/2021/10/25/hexo-abc/</url>
-    <content><![CDATA[<h2 id="hexo文档"><a href="#hexo文档" class="headerlink" title="hexo文档"></a>hexo文档</h2><p><a href="https://hexo.io/zh-cn/docs/">hexo文档</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
-<li><a href="https://gitforwindows.org/">安装git</a></li>
-<li><a href="https://nodejs.org/en/download/">安装nodejs, 选择windows的LTS版本</a></li>
-<li>安装Hexo<code>npm install -g hexo-cli</code></li>
-</ol>
-<p><strong>小白注意</strong><br>上面的命令以及以后的所有命令都可以用git自带的bash命令行<br>右键找到<code>Git Bash Here</code>点击即可进入命令行模式</p>
-<span id="more"></span>
-
-<h2 id="重要命令"><a href="#重要命令" class="headerlink" title="重要命令"></a>重要命令</h2><h3 id="init：初始化网站"><a href="#init：初始化网站" class="headerlink" title="init：初始化网站"></a>init：初始化网站</h3><p><code>hexo init [folder]</code><br>如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。<br>本命令相当于执行了以下几步：<br>Git clone hexo-starter 和 hexo-theme-landscape 主题到当前目录或指定目录。<br>使用 Yarn 1、pnpm 或 npm 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 Node.js 安装。</p>
-<h3 id="new：新建文章"><a href="#new：新建文章" class="headerlink" title="new：新建文章"></a>new：新建文章</h3><p><code>hexo new [layout] &lt;title&gt;</code><br>如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替，默认是 post。<br>post类型的文章会生成在<code>source/_posts</code>目录下，用markdown的语法编辑文件内容即可<br>如果标题包含空格的话，请使用引号括起来。<br><code>hexo new &quot;post title with whitespace&quot;</code></p>
-<h3 id="generate：生成静态文件"><a href="#generate：生成静态文件" class="headerlink" title="generate：生成静态文件"></a>generate：生成静态文件</h3><p><code>hexo generate</code><br>可简写为 hexo g<br><code>hexo g -d</code><br>文件成后立即部署网站</p>
-<h3 id="server：启动服务器"><a href="#server：启动服务器" class="headerlink" title="server：启动服务器"></a>server：启动服务器</h3><p><code>hexo server</code><br>默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
-<h3 id="deploy：部署网站"><a href="#deploy：部署网站" class="headerlink" title="deploy：部署网站"></a>deploy：部署网站</h3><p><code>hexo deploy</code><br>可简写为 hexo d<br><code>hexo d -g</code><br>部署之前预先生成静态文件</p>
-<h3 id="clean：清除缓存和静态文件"><a href="#clean：清除缓存和静态文件" class="headerlink" title="clean：清除缓存和静态文件"></a>clean：清除缓存和静态文件</h3><p><code>hexo clean</code><br>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
-<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>主配置文件</p>
-<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>应用程序信息</p>
-<h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p>模板文件夹<br>当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
-<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>除<code>_posts</code>文件夹之外，开头命名为<code>_</code>(下划线)的文件 / 文件夹和隐藏的文件将会被忽略。<br>Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</p>
-<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>主题文件夹。Hexo 会根据主题来生成静态页面。</p>
-<h2 id="重要配置"><a href="#重要配置" class="headerlink" title="重要配置"></a>重要配置</h2><p>主配置文件 _config.yml</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>title</td>
-<td align="left">网站标题</td>
-</tr>
-<tr>
-<td>subtitle</td>
-<td align="left">网站副标题</td>
-</tr>
-<tr>
-<td>description</td>
-<td align="left">网站描述</td>
-</tr>
-<tr>
-<td>keywords</td>
-<td align="left">网站的关键词。支持多个关键词。</td>
-</tr>
-<tr>
-<td>author</td>
-<td align="left">你的名字</td>
-</tr>
-<tr>
-<td>language</td>
-<td align="left">网站使用的语言。</td>
-</tr>
-<tr>
-<td>timezone</td>
-<td align="left">网站时区。Hexo 默认使用您电脑的时区。</td>
-</tr>
-<tr>
-<td>url</td>
-<td align="left">网址, 必须以 http:// 或 https:// 开头（本地，github，自己域名）</td>
-</tr>
-</tbody></table>
-<h2 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h2><h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>常见的参数有tags，categories，comments等等<br>这个特性<a href="/2021/10/31/hexo-theme-next-advanced/" title="[hexo主题next进阶应用]">[hexo主题next进阶应用]</a>- 添加标签和分页 有用到</p>
-<h3 id="标签插件（Tag-Plugins）"><a href="#标签插件（Tag-Plugins）" class="headerlink" title="标签插件（Tag Plugins）"></a>标签插件（Tag Plugins）</h3><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。<br>虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。<br>更多内容详见<a href="https://hexo.io/zh-cn/docs/tag-plugins" title="" target="">Hexo 标签插件</a></p>
-<h3 id="资源文件夹"><a href="#资源文件夹" class="headerlink" title="资源文件夹"></a>资源文件夹</h3><p>资源（Asset）代表 source 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。<br>更多内容详见<a href="https://hexo.io/zh-cn/docs/asset-folders" title="" target="">Hexo 资源文件夹</a></p>
-<h3 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h3><p>一般用于自定义的文件，目录是<code>source/_data</code><br>这个特性<a href="/2021/10/31/hexo-theme-next-advanced/" title="[hexo主题next进阶应用]">[hexo主题next进阶应用]</a> - 自定义文件 有用到</p>
-<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><ol>
-<li><p>在github上 创建 <code>[username].github.io</code> 仓库，username是你的github用户名</p>
-</li>
-<li><p>将本地的id_rsa.pub文件（一般在<code>C:\Users\[user]\.ssh</code>下）内容复制到settings的 Deploy keys。<br>如果没有，则在git bash里用命令行生成<code>ssh-keygen -t rsa -C &quot;youremail&quot;</code></p>
-</li>
-<li><p>在github上settings-&gt; Developer settings -&gt; Personal access tokens，生成个人访问密令<br>并记录，用于本地远程发布github代码，hexo部署代码的时候需要用到</p>
-</li>
-<li><p>修改hexo的_config.yml配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/[username]/[username].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>以上的username需替换为自己的github用户名</p>
-</li>
-<li><p>命令行一键部署</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>首次部署一般会出现github需要你输入的个人访问密令，将上面的密令输入即可，密码登录是无效的。<br>此时，等待github发布即可访问<code>https://[username].github.io</code></p>
-</li>
-</ol>
-<h2 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h2><ol>
-<li><p>个人域名指向[username].github.io<br>本人的域名是在腾讯云买的，所以在腾讯云的后台找到自己的域名管理页面解析域名。<br>添加一个域名解析<br>主机记录为www，记录类型为CNAME，记录值为[username].github.io<br>等待记录生效即可<br>同时可以申请免费的ssl证书，使域名可以使用https</p>
-</li>
-<li><p>创建CNAME文件<br>在站点目录的<code>source</code>下，新建CNAME文件，文件内容为你需要绑定的域名（不需要写https://）<br>例：<code>www.xxx.cn</code></p>
-</li>
-<li><p>github上绑定个人域名(不确定这步是否必须，最好做一下吧)<br>你的[username].github.io仓库-&gt;settings-&gt;pages，在custom domain里输入你的个人域名后保存。<br>同时可以开启Enforce https。</p>
-</li>
-<li><p>命令行一键部署</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>发布成功后，你可以通过访问个人域名浏览hexo的内容了。</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>next主题进阶应用</title>
     <url>/2021/10/31/hexo-theme-next-advanced/</url>
     <content><![CDATA[<h2 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h2><ol>
@@ -156,15 +51,130 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo入门【windows】</title>
+    <url>/2021/10/25/hexo-abc/</url>
+    <content><![CDATA[<h2 id="hexo文档"><a href="#hexo文档" class="headerlink" title="hexo文档"></a>hexo文档</h2><p>本文只介绍hexo在windows系统的使用<br>更多的内容可以阅读<a href="https://hexo.io/zh-cn/docs/">hexo官方文档</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>安装 git<br>下载地址：<a href="https://gitforwindows.org/">gitforwindows</a> 或者 <a href="https://git-scm.com/downloads">git-scm</a><br>安装成功后，在任意位置右键，找到<code>Git Bash Here</code>点击即可进入git命令行模式</li>
+</ol>
+<p><strong>以后的命令都推荐使用git命令行模式</strong></p>
+<ol start="2">
+<li><p>安装 nodejs<br>下载地址：<a href="https://nodejs.org/en/download/">nodejs</a> , 选择windows的LTS版本</p>
+</li>
+<li><p>安装Hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+</ol>
+<span id="more"></span>
+
+<h2 id="重要命令"><a href="#重要命令" class="headerlink" title="重要命令"></a>重要命令</h2><h3 id="init：初始化网站"><a href="#init：初始化网站" class="headerlink" title="init：初始化网站"></a>init：初始化网站</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init my-hexo-site</span><br></pre></td></tr></table></figure>
+<p>my-hexo-site文件夹就是你的hexo站点文件夹，所有的相关文件都在这里</p>
+<h3 id="new：新建文章"><a href="#new：新建文章" class="headerlink" title="new：新建文章"></a>new：新建文章</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;                       # title为文章标题</span><br><span class="line">hexo new &quot;post title with whitespace&quot;           # 标题包含空格要用引号括起来</span><br></pre></td></tr></table></figure>
+<p>如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替，默认是 post。<br>除了post类型外，一般有用的还有page类型<br>post类型的文章会生成在<code>source/_posts</code>目录下，可以用markdown的语法编辑文章</p>
+<h3 id="generate：生成静态文件"><a href="#generate：生成静态文件" class="headerlink" title="generate：生成静态文件"></a>generate：生成静态文件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo generate         # 可简写为 hexo g</span><br><span class="line">hexo g -d             # 文件成后立即部署网站</span><br></pre></td></tr></table></figure>
+
+<h3 id="server：启动服务器"><a href="#server：启动服务器" class="headerlink" title="server：启动服务器"></a>server：启动服务器</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo server           # 可简写为 hexo s</span><br></pre></td></tr></table></figure>
+<p>默认情况下，访问网址为： <code>http://localhost:4000/</code>。</p>
+<h3 id="deploy：部署网站"><a href="#deploy：部署网站" class="headerlink" title="deploy：部署网站"></a>deploy：部署网站</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo deploy           # 可简写为 hexo d</span><br><span class="line">hexo d -g             # 部署之前预先生成静态文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="clean：清除缓存和静态文件"><a href="#clean：清除缓存和静态文件" class="headerlink" title="clean：清除缓存和静态文件"></a>clean：清除缓存和静态文件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean            # 没有简写。。。</span><br></pre></td></tr></table></figure>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><p>主配置文件</p>
+<h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>应用程序信息</p>
+<h3 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h3><p>模板文件夹<br>当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
+<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><p>除<code>_posts</code>文件夹之外，开头命名为<code>_</code>(下划线)的文件 / 文件夹和隐藏的文件将会被忽略。<br>Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</p>
+<h3 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h3><p>主题文件夹。Hexo 会根据主题来生成静态页面。<br><strong>注：先进版本的hexo会把主题文件夹放在node_modules下面，一般不去改变主题文件夹的任何内容</strong></p>
+<h2 id="重要配置"><a href="#重要配置" class="headerlink" title="重要配置"></a>重要配置</h2><p>主配置文件 _config.yml</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td align="left">网站标题</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td align="left">网站副标题</td>
+</tr>
+<tr>
+<td>description</td>
+<td align="left">网站描述</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td align="left">网站的关键词。支持多个关键词。</td>
+</tr>
+<tr>
+<td>author</td>
+<td align="left">你的名字</td>
+</tr>
+<tr>
+<td>language</td>
+<td align="left">网站使用的语言。</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td align="left">网站时区。Hexo 默认使用您电脑的时区。</td>
+</tr>
+<tr>
+<td>url</td>
+<td align="left">网址, 必须以 http:// 或 https:// 开头（本地，github，自己域名）</td>
+</tr>
+</tbody></table>
+<h2 id="重要概念"><a href="#重要概念" class="headerlink" title="重要概念"></a>重要概念</h2><h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a>Front-matter</h3><p>Front-matter 是文件最上方以 <code>---</code> 分隔的区域，用于指定个别文件的变量，举例来说：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2021/10/31 20:46:25</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>常见的参数有tags，categories，comments等等<br>这个特性<a href="/2021/10/31/hexo-theme-next-advanced/" title="[hexo主题next进阶应用]">[hexo主题next进阶应用]</a>- 添加标签和分页 有用到</p>
+<h3 id="标签插件（Tag-Plugins）"><a href="#标签插件（Tag-Plugins）" class="headerlink" title="标签插件（Tag Plugins）"></a>标签插件（Tag Plugins）</h3><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。<br>虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。<br>更多内容详见<a href="https://hexo.io/zh-cn/docs/tag-plugins" title="" target="">Hexo 标签插件</a></p>
+<h3 id="资源文件夹"><a href="#资源文件夹" class="headerlink" title="资源文件夹"></a>资源文件夹</h3><p>资源（Asset）代表 source 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。<br>更多内容详见<a href="https://hexo.io/zh-cn/docs/asset-folders" title="" target="">Hexo 资源文件夹</a></p>
+<h3 id="数据文件"><a href="#数据文件" class="headerlink" title="数据文件"></a>数据文件</h3><p>一般用于自定义的文件，目录是<code>source/_data</code><br>这个特性<a href="/2021/10/31/hexo-theme-next-advanced/" title="[hexo主题next进阶应用]">[hexo主题next进阶应用]</a> - 自定义文件 有用到</p>
+<h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><ol>
+<li><p>在github上 创建 <code>[username].github.io</code> 仓库，username是你的github用户名</p>
+</li>
+<li><p>将本地的id_rsa.pub文件（一般在<code>C:\Users\[user]\.ssh</code>下）内容复制到settings的 Deploy keys。<br>如果没有，则在git bash里用命令行生成<code>ssh-keygen -t rsa -C &quot;youremail&quot;</code></p>
+</li>
+<li><p>在github上settings-&gt; Developer settings -&gt; Personal access tokens，生成个人访问密令<br>并记录，用于本地远程发布github代码，hexo部署代码的时候需要用到</p>
+</li>
+<li><p>修改hexo的_config.yml配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/[username]/[username].github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>以上的username需替换为自己的github用户名</p>
+</li>
+<li><p>命令行一键部署</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>首次部署一般会出现github需要你输入的个人访问密令，将上面的密令输入即可，密码登录是无效的。<br>此时，等待github发布即可访问<code>https://[username].github.io</code></p>
+</li>
+</ol>
+<h2 id="绑定个人域名"><a href="#绑定个人域名" class="headerlink" title="绑定个人域名"></a>绑定个人域名</h2><ol>
+<li><p>个人域名指向[username].github.io<br>本人的域名是在腾讯云买的，所以在腾讯云的后台找到自己的域名管理页面解析域名。<br>添加一个域名解析<br>主机记录为www，记录类型为CNAME，记录值为[username].github.io<br>等待记录生效即可<br>同时可以申请免费的ssl证书，使域名可以使用https</p>
+</li>
+<li><p>创建CNAME文件<br>在站点目录的<code>source</code>下，新建CNAME文件，文件内容为你需要绑定的域名（不需要写https://）<br>例：<code>www.xxx.cn</code></p>
+</li>
+<li><p>github上绑定个人域名(不确定这步是否必须，最好做一下吧)<br>你的[username].github.io仓库-&gt;settings-&gt;pages，在custom domain里输入你的个人域名后保存。<br>同时可以开启Enforce https。</p>
+</li>
+<li><p>命令行一键部署</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>发布成功后，你可以通过访问个人域名浏览hexo的内容了。</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo主题next及其基本配置</title>
     <url>/2021/10/30/hexo-theme-next/</url>
-    <content><![CDATA[<h2 id="hexo-主题"><a href="#hexo-主题" class="headerlink" title="hexo 主题"></a>hexo 主题</h2><p><a href="https://hexo.io/themes/">hexo 主题</a><br><a href="https://theme-next.js.org/docs/">next 文档</a></p>
+    <content><![CDATA[<h2 id="hexo-主题"><a href="#hexo-主题" class="headerlink" title="hexo 主题"></a>hexo 主题</h2><p><a href="https://hexo.io/themes/">hexo 主题</a><br><a href="https://theme-next.js.org/docs/">next 官方文档</a></p>
 <h2 id="更换主题为next"><a href="#更换主题为next" class="headerlink" title="更换主题为next"></a>更换主题为next</h2><ol>
 <li>下载next主题<br>在站点文件夹下，以下命令任选一种<br>npm：<code>npm install hexo-theme-next</code><br>git：<code>git clone https://github.com/next-theme/hexo-theme-next themes/next</code></li>
 </ol>
 <p><strong>注意，不要直接修改主题的所有文件，只可以改变站点文件夹下的其他内容</strong></p>
 <ol start="2">
-<li>修改_config.yml文件<br>将theme的内容改为next<br><code>theme: next</code></li>
+<li>修改_config.yml文件<br>将theme的内容改为next<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line"># theme: landscape</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure></li>
 </ol>
 <span id="more"></span>
 
