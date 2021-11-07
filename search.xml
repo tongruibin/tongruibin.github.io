@@ -189,7 +189,7 @@
 <li><p>手动提交链接<br>登录<code>https://ziyuan.baidu.com/linksubmit/index</code><br>①sitemap文件提交<br>本地生成的baidusitemap.xml在网页上提交即可<br>②网站链接逐条提交<br>将站点生成的baidu_urls.txt的内容复制提交</p>
 </li>
 </ol>
-<h2 id="nofollow"><a href="#nofollow" class="headerlink" title="nofollow"></a>nofollow</h2>]]></content>
+]]></content>
       <categories>
         <category>hexo</category>
         <category>hexo-theme-next</category>
